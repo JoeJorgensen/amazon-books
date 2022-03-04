@@ -1,4 +1,4 @@
 class Author < ApplicationRecord
 
-    has_many :songs, dependent: :destroy
+    has_many :books, dependent: :destroy
 end

@@ -41,7 +41,7 @@ class Api::BooksController < ApplicationController
     end
 
     def set_author
-        @author = Author.find(params[:artist_id])
+        @author = Author.find(params[:author_id])
     end
 
 
