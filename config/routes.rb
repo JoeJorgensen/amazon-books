@@ -14,9 +14,15 @@ Rails.application.routes.draw do
   post 'authors/:author_id/books', to:'books#create'
   put 'authors/:author_id/books/:id', to:'books#update'
   delete 'authors/:author_id/books/:id', to:'books/#destroy'
+  get 'books_all', to: 'books#books_all'
 
   
-  
+  get 'bikes', to:'bikes#index'
+  get 'bikes/:id', to:'bikes#show'
+  post 'bikes', to:'bikes#create'
+  put 'bikes/:id', to: 'bikes#update'
+  delete 'bikes/:id', to:'bikes#destroy'
+
   
   end
 

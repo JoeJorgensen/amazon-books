@@ -1,7 +1,11 @@
 class Api::BooksController < ApplicationController
-
-    before_action :set_author
+   before_action :set_author, except: [:books_all]
+   
     before_action :set_book, only:[:show, :update, :destroy]
+
+
+    
+    
 
     def index 
         render json: @author.books.all 
@@ -9,6 +13,10 @@ class Api::BooksController < ApplicationController
 
     def  show
         render json: @book
+    end
+
+    def books_all
+        render json: Book.all
     end
 
 

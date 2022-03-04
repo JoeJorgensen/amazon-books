@@ -18,4 +18,8 @@ TimFerris.books.create(name:'The 4-Hour Workweek', genre:'Non-Fiction')
 Book.create(name:"Harry Potter and the Prisoner of Azkaban", genre:'Fiction', author_id:JkRowling.id)
 
 
+Commencial = Bike.create(make:'Commencial', color:'blue')
+YT = Bike.create(make:'YT', color:'blue')
 
+
+# YT.bike.create()
