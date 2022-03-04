@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+JkRowling = Author.create(name:'JK Rowling', age:41)
+TimFerris = Author.create(name:'Tim Ferris', age:34)
+
+JkRowling.books.create(name:"Harry Potter and the Sorcerer's stone", genre:'Fiction')
+JkRowling.books.create(name:"Harry Potter and the Chamber of Secrets", genre:'Fiction')
+TimFerris.books.create(name:'Tools of Titans', genre:'Non-Fiction')
+
+Book.create(name:"Harry Potter and the Prisoner of Azkaban", genre:'Fiction', author_id:JkRowling.id)
+
+
+
