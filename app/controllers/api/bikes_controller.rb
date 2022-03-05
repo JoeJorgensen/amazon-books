@@ -4,7 +4,7 @@ class Api::BikesController < ApplicationController
     def index
         render json: Bike.all
     end
-
+    
 
     def show
         render json: @bike

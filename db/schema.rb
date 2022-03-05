@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_04_220942) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_04_234233) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +19,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_04_220942) do
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "bike_types", force: :cascade do |t|
+    t.string "catagory"
+    t.integer "price"
+    t.bigint "bike_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bike_id"], name: "index_bike_types_on_bike_id"
   end
 
   create_table "bikes", force: :cascade do |t|
@@ -37,5 +46,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_04_220942) do
     t.index ["author_id"], name: "index_books_on_author_id"
   end
 
+  add_foreign_key "bike_types", "bikes"
   add_foreign_key "books", "authors"
 end

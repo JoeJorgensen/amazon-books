@@ -18,8 +18,11 @@ TimFerris.books.create(name:'The 4-Hour Workweek', genre:'Non-Fiction')
 Book.create(name:"Harry Potter and the Prisoner of Azkaban", genre:'Fiction', author_id:JkRowling.id)
 
 
-Commencial = Bike.create(make:'Commencial', color:'blue')
+Commencial = Bike.create(make:'Commencial', color:'silver')
 YT = Bike.create(make:'YT', color:'blue')
 
 
-# YT.bike.create()
+YT.bike_types.create(catagory:'Mountain Bike', price: 2999)
+Commencial.bike_types.create(catagory:'Enduro Bike', price: 3499)
+
+# Bike_type.create(catagory'Enduro', price:3499, bike_id:Commencial.id)

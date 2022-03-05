@@ -22,10 +22,21 @@ Rails.application.routes.draw do
   post 'bikes', to:'bikes#create'
   put 'bikes/:id', to: 'bikes#update'
   delete 'bikes/:id', to:'bikes#destroy'
+ 
 
+
+  get 'bikes/:bike_id/bike_types', to:'bike_types#index'
+  get 'bikes/:bike_id/bike_types/:id', to:'bike_types#show'
+  post 'bikes/:bike_id/bike_types', to:'bike_types#create'
+  put 'bikes/:bike_id/bike_types/:id', to:'bike_types#update'
+  delete 'bikes/:bike_id/bike_types/:id', to:'bike_types#destroy'
+
+  get 'bike_types_all', to: 'bike_types#bike_types_all'
+
+
+  # get 'all_bikes_all_types', to:'bike_types#all_bikes_all_types'
   
   end
-
   # Defines the root path route ("/")
   # root "articles#index"
 end
